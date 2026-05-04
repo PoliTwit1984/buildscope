@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 250 250 247;
+  --foreground: 10 10 10;
+}
+
+html,
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--foreground));
+  font-feature-settings: "ss01", "cv11";
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.prose-spec h2 {
+  @apply text-lg font-semibold mt-8 mb-2 text-ink;
+}
+.prose-spec h3 {
+  @apply text-base font-semibold mt-6 mb-2 text-ink;
+}
+.prose-spec p {
+  @apply text-[15px] leading-relaxed text-ink mb-3;
+}
+.prose-spec ul {
+  @apply list-disc pl-5 space-y-1 mb-3 text-[15px] text-ink;
+}
+.prose-spec ol {
+  @apply list-decimal pl-5 space-y-1 mb-3 text-[15px] text-ink;
+}
+.prose-spec code {
+  @apply font-mono text-[13px] bg-line/60 px-1 py-0.5 rounded;
+}
+.prose-spec pre {
+  @apply font-mono text-[13px] bg-ink text-paper p-4 rounded-lg overflow-x-auto my-4;
+}
+.prose-spec pre code {
+  @apply bg-transparent p-0;
+}
